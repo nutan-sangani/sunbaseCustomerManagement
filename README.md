@@ -53,6 +53,29 @@ I have created a POSTMAN collection for testing all the api's, you can email me 
 
 ScreenShots of the Website :
 
+### Home page :
+
 ![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/3664c716-195c-41a8-a003-cca72354c837)
+
+### Login page :
+
+![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/96418db9-452c-44ba-8084-1b543bb5e568)
+
+### Add customers page :
+
+![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/a0a42265-b4d8-4ab2-8b9b-66d461254ded)
+
+### Search Customers page : 
+
+![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/fc23537a-92db-479b-a8bd-bc150aff924a)
+
+### Update Customer page :
+
+![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/c18463f8-3706-468f-a7e4-3d4d739232d3)
+
+### All customers after syncing :
+
+![image](https://github.com/nutan-sangani/sunbaseCustomerManagement/assets/116813161/9b81bcdd-fb91-4d0c-8234-4dd97282855c)
+
 
 
