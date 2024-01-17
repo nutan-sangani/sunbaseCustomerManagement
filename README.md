@@ -1,15 +1,19 @@
 ## Description
 ### This an customer Management app built using React as frontend, spring boot for rest apis and mysql for database.
 
-## Features
-#### 1. My project has all the crud features , like adding, searching, removing, updating customers.
+## Features :
+1. Authentication using JWT.
+2. Has feature to add, delete, update, retreive customers from the database
+3. Has feature to sync data with a remote server, using the sync button on the bottom of the getCustomer page
 
-## Features that could not be implemented
-#### 1. I could not implement JWT authentication on my app, due to time constraints.
-#### 2. I cound not implement proper error handling due to time constraints (i know time shouldnt be an excuse for error handling, but i am quite new to spring boot, thus delay).
+## Things that it lack :
+1. Tests. (could not implement, due to time constraint and lack of knowledge of testing in java).
+2. Error handling on frontend as well as backend to convey meaning full error messages (could not implement due to time constraints).
+3. Register functionality has not been implemented, since it was not one of the requirements.
+
 
 ## How to start the app
-0.  Clone the repo to local pc using " git clone -b master https://github.com/nutan-sangani/sunbaseAssignment.git " (remember to clone master branch)
+0.  Clone the repo to your local pc using the command : "git clone https://github.com/nutan-sangani/sunbaseCustomerManagement.git"
 1.  Open mysql and create 2 table : 
     create table customers (
     id varchar(40) primary key not null,
@@ -29,11 +33,24 @@
     );
     
     insert into usercredential (login_id,pass) values ("test@sunbasedata.com","Test@123");
-2.  Than open the server and go to the application.properties and enter your secret and mysql username, dbname, password
-3.  Once all this is configured and you have maven, java, mysql installed on your pc, you can go to the server/customerManagement directory and execute :
+    
+3.  Than open the server and go to the application.properties and enter your secret and mysql username, dbname, password
+4.  Once all this is configured and you have maven, java, mysql installed on your pc, you can go to the server/customerManagement directory and execute :
     a. ./mvnw clean install (to install all dependencies for spring boot server).
     b. ./mvnw spring-boot:run (to start the server).
-4.  Then to start the frontend, in other terminal go to the client/client/ directory and execute :
+5.  Then to start the frontend, in other terminal go to the client/client/ directory and execute :
     a. npm install (to install react dependencies)
     b. npm start (to start react)
-5.  Now you can go to http://localhost:3000 to test the project.
+6.  Now you can go to http://localhost:3000 to test the project.
+
+## General Structure of the Project :
+1. We have 2 tables, one (customers table) to store customer data and other (userCredential table) to store the data of the user (Admin or the person who has access to all the customers data).
+2. Data in userCredential table can be inserted manually or we can add register feature (currently not there).
+3. So when the user login's he gets a jwt, which is stored in his localStorage and which is sent on all further request to customer routes.
+4. To sync the data with the remotesServer, we use the user's id and pass in our userCredential table, to get an authentication token from the remote server mentioned in the assignment doc. With this auth token(which is seperate from our own jwt token) we send request to remoteServer. For this, it is necessay that userCredentials are same on both the databases, ie the remoteServer database and our database.
+
+I have created a POSTMAN collection for testing all the api's, you can email me your email id, so that i can send the collection, so that testing can be done on your end (my email is nutan.sangani.work@gmail.com)
+
+ScreenShots of the Website :
+
+
