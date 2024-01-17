@@ -33,7 +33,7 @@ public class RemoteServerController {
         HttpHeaders headers = new HttpHeaders();
         try{
             AccessToken token = getAuthToken("https://qa.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp",jwtToken);
-            headers.set("Authorization","Bearer "+token);
+            headers.set("Authorization","Bearer "+token.getAccess_token());
             String uri = "https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=get_customer_list";
 
             HttpEntity entity = new HttpEntity<>(headers);
